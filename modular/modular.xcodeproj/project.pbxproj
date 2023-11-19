@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		C41163FC2B09103F00F0C224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41163FB2B09103F00F0C224 /* AppDelegate.swift */; };
 		C41163FE2B09103F00F0C224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41163FD2B09103F00F0C224 /* SceneDelegate.swift */; };
-		C41164002B09103F00F0C224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41163FF2B09103F00F0C224 /* ViewController.swift */; };
 		C41164052B09104000F0C224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41164042B09104000F0C224 /* Assets.xcassets */; };
 		C41164082B09104000F0C224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41164062B09104000F0C224 /* LaunchScreen.storyboard */; };
+		C41164112B09FC4A00F0C224 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164102B09FC4A00F0C224 /* HomeViewController.swift */; };
+		C41164132B09FCAE00F0C224 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164122B09FCAE00F0C224 /* HomeModel.swift */; };
+		C41164152B09FCCB00F0C224 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164142B09FCCB00F0C224 /* HomeViewModel.swift */; };
+		C41164172B0A4DB300F0C224 /* CatFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164162B0A4DB300F0C224 /* CatFactsTableViewCell.swift */; };
+		C411641A2B0A582A00F0C224 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164192B0A582A00F0C224 /* NetworkManager.swift */; };
+		C411641C2B0A740B00F0C224 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411641B2B0A740B00F0C224 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C41163F82B09103F00F0C224 /* modular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = modular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41163FB2B09103F00F0C224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C41163FD2B09103F00F0C224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C41163FF2B09103F00F0C224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C41164042B09104000F0C224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C41164072B09104000F0C224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41164092B09104000F0C224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C41164102B09FC4A00F0C224 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C41164122B09FCAE00F0C224 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		C41164142B09FCCB00F0C224 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C41164162B0A4DB300F0C224 /* CatFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsTableViewCell.swift; sourceTree = "<group>"; };
+		C41164192B0A582A00F0C224 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C411641B2B0A740B00F0C224 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		C41163FA2B09103F00F0C224 /* modular */ = {
 			isa = PBXGroup;
 			children = (
+				C41164182B0A580A00F0C224 /* NetworkManager */,
+				C411640F2B09FC2D00F0C224 /* HomePage */,
 				C41163FB2B09103F00F0C224 /* AppDelegate.swift */,
 				C41163FD2B09103F00F0C224 /* SceneDelegate.swift */,
-				C41163FF2B09103F00F0C224 /* ViewController.swift */,
 				C41164042B09104000F0C224 /* Assets.xcassets */,
 				C41164062B09104000F0C224 /* LaunchScreen.storyboard */,
 				C41164092B09104000F0C224 /* Info.plist */,
+				C41164162B0A4DB300F0C224 /* CatFactsTableViewCell.swift */,
 			);
 			path = modular;
+			sourceTree = "<group>";
+		};
+		C411640F2B09FC2D00F0C224 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				C41164122B09FCAE00F0C224 /* HomeModel.swift */,
+				C41164142B09FCCB00F0C224 /* HomeViewModel.swift */,
+				C41164102B09FC4A00F0C224 /* HomeViewController.swift */,
+				C411641B2B0A740B00F0C224 /* HomeView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		C41164182B0A580A00F0C224 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C41164192B0A582A00F0C224 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C41164002B09103F00F0C224 /* ViewController.swift in Sources */,
+				C41164132B09FCAE00F0C224 /* HomeModel.swift in Sources */,
+				C41164112B09FC4A00F0C224 /* HomeViewController.swift in Sources */,
 				C41163FC2B09103F00F0C224 /* AppDelegate.swift in Sources */,
+				C411641A2B0A582A00F0C224 /* NetworkManager.swift in Sources */,
+				C41164172B0A4DB300F0C224 /* CatFactsTableViewCell.swift in Sources */,
+				C411641C2B0A740B00F0C224 /* HomeView.swift in Sources */,
+				C41164152B09FCCB00F0C224 /* HomeViewModel.swift in Sources */,
 				C41163FE2B09103F00F0C224 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
