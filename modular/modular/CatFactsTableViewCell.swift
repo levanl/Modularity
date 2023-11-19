@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CatFactsTableViewCell: UITableViewCell {
+final class CatFactsTableViewCell: UITableViewCell {
     
     static let identifier = "CatFactsTableViewCell"
     
-    let fact: UILabel = {
+    private let fact: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +29,7 @@ class CatFactsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupFact() {
+    private func setupFact() {
         addSubview(fact)
         
         NSLayoutConstraint.activate([

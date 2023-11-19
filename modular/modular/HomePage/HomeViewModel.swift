@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import NetworkingPackageGeneric
 
 protocol HomeViewModelDelegate: AnyObject {
     func factFetched(_ facts: [FactModel.Fact])
     func showError(_ error: Error)
 }
 
+// MARK: ViewModel
 final class HomeViewModel {
     
     private var facts: [FactModel.Fact]?
@@ -22,14 +24,15 @@ final class HomeViewModel {
         fetchFacts()
     }
     
-    func fetchFacts() {
-        NetworkManager.getFacts { result in
+    private func fetchFacts() {
+        let apiURL = "https://catfact.ninja/facts"
+        NetworkManager.fetchData(from: apiURL, modelType: FactModel.self) { result in
             switch result {
             case .success(let factModel):
                 self.facts = factModel.data
                 self.delegate?.factFetched(factModel.data)
             case .failure(let error):
-                self.delegate?.showError(error)
+                print("Error: \(error.localizedDescription)")
             }
         }
     }

@@ -15,8 +15,8 @@
 		C41164132B09FCAE00F0C224 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164122B09FCAE00F0C224 /* HomeModel.swift */; };
 		C41164152B09FCCB00F0C224 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164142B09FCCB00F0C224 /* HomeViewModel.swift */; };
 		C41164172B0A4DB300F0C224 /* CatFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164162B0A4DB300F0C224 /* CatFactsTableViewCell.swift */; };
-		C411641A2B0A582A00F0C224 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41164192B0A582A00F0C224 /* NetworkManager.swift */; };
 		C411641C2B0A740B00F0C224 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411641B2B0A740B00F0C224 /* HomeView.swift */; };
+		C411641F2B0A90CD00F0C224 /* NetworkingPackageGeneric in Frameworks */ = {isa = PBXBuildFile; productRef = C411641E2B0A90CD00F0C224 /* NetworkingPackageGeneric */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,6 @@
 		C41164122B09FCAE00F0C224 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		C41164142B09FCCB00F0C224 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C41164162B0A4DB300F0C224 /* CatFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsTableViewCell.swift; sourceTree = "<group>"; };
-		C41164192B0A582A00F0C224 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C411641B2B0A740B00F0C224 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C411641F2B0A90CD00F0C224 /* NetworkingPackageGeneric in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,6 @@
 		C41163FA2B09103F00F0C224 /* modular */ = {
 			isa = PBXGroup;
 			children = (
-				C41164182B0A580A00F0C224 /* NetworkManager */,
 				C411640F2B09FC2D00F0C224 /* HomePage */,
 				C41163FB2B09103F00F0C224 /* AppDelegate.swift */,
 				C41163FD2B09103F00F0C224 /* SceneDelegate.swift */,
@@ -87,14 +86,6 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
-		C41164182B0A580A00F0C224 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				C41164192B0A582A00F0C224 /* NetworkManager.swift */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,6 +102,9 @@
 			dependencies = (
 			);
 			name = modular;
+			packageProductDependencies = (
+				C411641E2B0A90CD00F0C224 /* NetworkingPackageGeneric */,
+			);
 			productName = modular;
 			productReference = C41163F82B09103F00F0C224 /* modular.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +133,9 @@
 				Base,
 			);
 			mainGroup = C41163EF2B09103F00F0C224;
+			packageReferences = (
+				C411641D2B0A90CD00F0C224 /* XCRemoteSwiftPackageReference "networking-package-generic" */,
+			);
 			productRefGroup = C41163F92B09103F00F0C224 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,7 +165,6 @@
 				C41164132B09FCAE00F0C224 /* HomeModel.swift in Sources */,
 				C41164112B09FC4A00F0C224 /* HomeViewController.swift in Sources */,
 				C41163FC2B09103F00F0C224 /* AppDelegate.swift in Sources */,
-				C411641A2B0A582A00F0C224 /* NetworkManager.swift in Sources */,
 				C41164172B0A4DB300F0C224 /* CatFactsTableViewCell.swift in Sources */,
 				C411641C2B0A740B00F0C224 /* HomeView.swift in Sources */,
 				C41164152B09FCCB00F0C224 /* HomeViewModel.swift in Sources */,
@@ -385,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C411641D2B0A90CD00F0C224 /* XCRemoteSwiftPackageReference "networking-package-generic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/levanl/networking-package-generic.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C411641E2B0A90CD00F0C224 /* NetworkingPackageGeneric */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C411641D2B0A90CD00F0C224 /* XCRemoteSwiftPackageReference "networking-package-generic" */;
+			productName = NetworkingPackageGeneric;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C41163F02B09103F00F0C224 /* Project object */;
 }

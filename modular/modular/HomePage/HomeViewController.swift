@@ -37,12 +37,12 @@ final class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
-    func setupOnLoad() {
+    private func setupOnLoad() {
         view = itemView
         view.backgroundColor = .white
     }
     
-    func setDelegates() {
+    private func setDelegates() {
         itemView.catFactsTableView.delegate = self
         itemView.catFactsTableView.dataSource = self
         viewModel.delegate = self

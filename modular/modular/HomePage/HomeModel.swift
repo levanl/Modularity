@@ -15,6 +15,6 @@ struct FactModel: Decodable {
         let fact: String
         let length: Int
     }
-
+    
 }
 
