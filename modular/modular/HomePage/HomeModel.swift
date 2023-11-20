@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Model
 struct FactModel: Decodable {
     
     let data: [Fact]

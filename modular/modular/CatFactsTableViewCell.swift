@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Cat Facts TableViewCell
 final class CatFactsTableViewCell: UITableViewCell {
     
     static let identifier = "CatFactsTableViewCell"
